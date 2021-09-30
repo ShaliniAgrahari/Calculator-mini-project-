@@ -4,16 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shalini</title>
+    <title>Calculator</title>
+        <script>
+        function cal(val)
+        {
+        document.getElementById("txt1").value+=val
+        }
+        function Delete()
+        {
+        var s=document.getElementById("txt1").value
+        var st=s.substring(0,s.length-1);
+        document.getElementById("txt1").value=st;
+        }
+        function clr()
+        {
+         document.getElementById("txt1").value="";
+        }
+        function equal()
+        {
+         var x=document.getElementById("txt1").value
+         var y=eval(x);
+         document.getElementById("txt1").value=y
+        }
+        function showTime()
+        {
+            var t,d,dt;
+            d=document.getElementById("time");
+            dt=new Date();
+            t=dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds();
+            d.innerText=t;
+            window.setTimeout("showTime()",1000);
+        }
+        </script>
+        <Style>
+        input[type="button"]
+        {
+        height:40px;
+        width:40px;
+        margin:.5%;
+        font-size:20px;
+        color:white;
+        background:none;
+        border:none;
+        }
+        </style>
 </head>
-<body>
-    <div>
+<body bgcolor="skyblue" onload="showTime()">
+    <div  style="width:1300px;">
+        <div  style="width:770px;font-size:25px">
+        <p style="color:black;margin-top:30%;margin-left:18%;font-family:helvetica"> <b style="font-size:40px;">Calculator</b><br/><br/> Helps you think faster !</p>
+        </div>
+        <div style="box-shadow:5px 20px 20px black;margin-top:-290px;border-radius:3%;min-height:500px;width:230px;border:5px solid black;background:rgb(0,0,0,0.6);margin-left:60%;padding:10px;">
+        <center><div style="height:5px;width:120px;background:black;border-radius:40%;"></div></center>
+        <div id="time"style="background:transparent;font-size:40px;border-radius:5%;width:100%;height:120px;text-align:center;margin-top:20px;color:white;">
+        </div>
+        <input type="text" id="txt1" 
+        style="color:white;background:transparent;font-size:20px;border-radius:5%;width:100%;height:80px;border:none;"/><br/>
+        <br/>
+        <input type="button" id="txt2" value="C" onclick="clr()"/>
+        <input type="button" id="txt2" value="(" onclick="cal('(')"/>
+        <input type="button" id="txt2" value=")" onclick="cal(')')"/>
+        <input type="button" id="txt2" value="X" onclick="Delete()"/>
+        <input type="button" id="txt2" value="%" onclick="cal('%')" style="box-shadow:2px 2px 2px black;background:skyblue;height:40px;width:40px;font-size:20px;border-radius:50%;"/>
+        <input type="button" id="txt2" value="7"onclick="cal('7')"/>
 
-    </div>
-    <p>Hello World </p>
-    <p>hjhgfhgfd</p>
-    <p>fgjkljnmmmmmmmmmmm</p>
-    <p>jhgf</p>
-    <h1>ghjklkjhgfds</h1>
+        <input type="button" id="txt2" value="9"onclick="cal('9')"/>
+        <input type="button" id="txt2" value="-" onclick="cal('-')" style="box-shadow:2px 2px 2px black;background:skyblue;height:40px;width:40px;font-size:25px;border-radius:50%;"/>
+        <input type="button" id="txt2" value="/" onclick="cal('/')" style="box-shadow:2px 2px 2px black;background:skyblue;height:40px;width:40px;font-size:25px;border-radius:50%;"/>
+        <input type="button" id="txt2" value="4" onclick="cal('4')"/>
+        <input type="button" id="txt2" value="5" onclick="cal('5')"/>
+        <input type="button" id="txt2" value="6" onclick="cal('6')"/>
+        <input type="button" id="txt2" value="+" onclick="cal('+')" style="box-shadow:2px 2px 2px black;background:skyblue;height:40px;width:40px;font-size:25px;border-radius:50%;"/>
+        <input type="button" id="txt2" value="*" onclick="cal('*')" style="box-shadow:2px 2px 2px black;background:skyblue;height:40px;width:40px;font-size:25px;border-radius:50%;"/>
+        <input type="button" id="txt2" value="1" onclick="cal('1')"/>
+        <input type="button" id="txt2" value="2" onclick="cal('2')"/>
+        <input type="button" id="txt2" value="3" onclick="cal('3')"/>
+        <input type="button" id="txt2" value="=" onclick="equal()" style="box-shadow:2px 2px 2px black;border-radius:30%;background:skyblue;height:40px;width:80px;font-size:25px;margin-left:5px;"/>
+        <input type="button" id="txt2" value="0" onclick="cal('0')"/>
+        <input type="button" id="txt2" value="<" onclick="cal('<')"/>
+        <input type="button" id="txt2" value=">" onclick="cal('>')"/>
+        <input type="button" id="txt2" value="!=" onclick="cal('!=')"/>
+        <input type="button" id="txt2" value="." onclick="cal('.')" style="box-shadow:2px 2px 2px black;background:skyblue;height:40px;width:40px;font-size:25px;border-radius:50%;"/>
+        </div>
+        </div>
+ 
 </body>
 </html>
