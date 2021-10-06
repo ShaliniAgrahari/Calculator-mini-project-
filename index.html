@@ -5,49 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-        <script>
-        function cal(val)
-        {
-        document.getElementById("txt1").value+=val
-        }
-        function Delete()
-        {
-        var s=document.getElementById("txt1").value
-        var st=s.substring(0,s.length-1);
-        document.getElementById("txt1").value=st;
-        }
-        function clr()
-        {
-         document.getElementById("txt1").value="";
-        }
-        function equal()
-        {
-         var x=document.getElementById("txt1").value
-         var y=eval(x);
-         document.getElementById("txt1").value=y
-        }
-        function showTime()
-        {
-            var t,d,dt;
-            d=document.getElementById("time");
-            dt=new Date();
-            t=dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds();
-            d.innerText=t;
-            window.setTimeout("showTime()",1000);
-        }
-        </script>
-        <Style>
-        input[type="button"]
-        {
-        height:40px;
-        width:40px;
-        margin:.5%;
-        font-size:20px;
-        color:white;
-        background:none;
-        border:none;
-        }
-        </style>
+        <script src="/index.js"></script>
+        <link rel="stylesheet" href="style.css">
+        
 </head>
 <body bgcolor="skyblue" onload="showTime()">
     <div  style="width:1300px;">
@@ -67,6 +27,7 @@
         <input type="button" id="txt2" value="X" onclick="Delete()"/>
         <input type="button" id="txt2" value="%" onclick="cal('%')" style="box-shadow:2px 2px 2px black;background:skyblue;height:40px;width:40px;font-size:20px;border-radius:50%;"/>
         <input type="button" id="txt2" value="7"onclick="cal('7')"/>
+        <input type="button" id="txt2" value="8"onclick="cal('8')"/>
 
         <input type="button" id="txt2" value="9"onclick="cal('9')"/>
         <input type="button" id="txt2" value="-" onclick="cal('-')" style="box-shadow:2px 2px 2px black;background:skyblue;height:40px;width:40px;font-size:25px;border-radius:50%;"/>

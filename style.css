@@ -1,0 +1,9 @@
+input[type="button"] {
+    height: 40px;
+    width: 40px;
+    margin: .5%;
+    font-size: 20px;
+    color: white;
+    background: none;
+    border: none;
+}
