@@ -1,3 +1,2 @@
-This is my project of webD 
-check it out and suggest me to do this in a better way 
-thank you 
+This is My Project Of WebD. Check It out and do your calculations through it. And tell me also if it is working properly or not . 
+Thank you 
